@@ -16,25 +16,27 @@ Use the graphic below to answer the following questions:
 
 1. Which part of the URL can be manipulated by an attacker to exploit a vulnerable back-end database system? 
 
-Answer:
+Answer: The parameters part could be used to append SQL commands or other query language parameters to a URL, in an attempt to have info returned from a backend database system.
 
 2. Which part of the URL can be manipulated by an attacker to cause a vulnerable web server to dump the `/etc/passwd` file? Also, name the attack used to exploit this vulnerability.
 
-Answer:
+Answer: The Path part of a URL can be manipulated using a dot-dot-slash sequence in an attempt to get the URL to reference the `/etc/passwd` file.  This is known as a Path or Directory Traversal attack.
    
 3. Name three threat agents that can pose a risk to your organization.
 
-Answer:
+Answer: Insider Threat, State-sponsored Attackers, and Hacktivists
 
 4. What kinds of sources can act as an attack vector for injection attacks?
 
-Answer:
+Answer: Driveby Attacks, URL Tampering, Cross-Site Scripting, Clickjacking, Content Spoofing.
 
 5. Injection attacks exploit which part of the CIA triad?
 
-Answer:
+Answer: Confidentiality
 
-6. Which two mitigation methods can be used to thwart injection attacks?
+6. Which two mitigation methods can be used to thwart injection attacks? 
+
+Answer: Input Sanitation and Input Validation
 
 ____
 
@@ -54,23 +56,23 @@ Use the graphic below to answer the following questions:
    
 1. What stage is the most inner part of the web architecture where data such as, customer names, addresses, account numbers, and credit card info, is stored?
 
-Answer:
+Answer: Stage 5 Database
 
 2. Which stage includes online forms, word processors, shopping carts, video and photo editing, spreadsheets, file scanning, file conversion, and email programs such as Gmail, Yahoo and AOL.
 
-Answer:
+Answer: Stage 4 Web Application
 
 3. What stage is the component that stores files (e.g. HTML documents, images, CSS stylesheets, and JavaScript files) that's connected to the Internet and provides support for physical data interactions between other devices connected to the web?
 
-Answer:
+Answer:  Stage 3 Web Server
 
 4. What stage is where the end user interacts with the World Wide Web through the use of a web browser?
 
-Answer:
+Answer: Stage 1 Client
 
 5. Which stage is designed to prevent unauthorized access to and from protected web server resources?
 
-Answer:
+Answer: Stage 2 Firewall
 
 ----
 
@@ -81,29 +83,35 @@ In today’s globally connected cyber community, network and OS level attacks ar
 
 1. What is the process called that cleans and scrubs user input in order to prevent it from exploiting security holes by proactively modifying user input.
 
-Answer:
+Answer: Input Sanitation   
 
 2. Name the process that tests user and application-supplied input. The process is designed to prevent malformed data from entering a data information system by verifying user input meets a specific set of criteria (i.e. a string that does not contain standalone single quotation marks).
 
-Answer:
+Answer: Input Validation
 
 3. **Secure SDLC** is the process of ensuring security is built into web applications throughout the entire software development life cycle. Name three reasons why organization might fail at producing secure web applications.
 
-Answer:
+Answer: 
+- Implementation costs are high.
+- Lack of support from management.
+- Lack of standardization.
+- No quality management.
+- Reactive security posture ("If it ain’t broke, don’t fix it" mentality).
+- Reliance on a false sense of security that web application firewalls provide absolute protection.
 
 4. How might an attacker exploit the `robots.txt` file on a web server?
 
-Answer:
+Answer: Experienced criminal hackers will attempt to harvest the robots.txt file using the URL to retrieve private data, such as content management system information and root directory structure. Because the robots.txt file contains sensitive web server information, such as a list of files and web server directories, that website owners want to hide from web crawlers.
 
 5. What steps can an organization take to obscure or obfuscate their contact information on domain registry web sites?
 
-Answer:
+Answer: They can use proxy information instead of personal or company information.
    
 6. True or False: As a network defender, `Client-Side` validation is preferred over `Server-Side` validation because it's easier to defend against attacks.
 
    - Explain why you chose the answer that you did.
 
-Answer:
+Answer: False, using `Client-Side` validation opens the door for attacks such as Client-Side Javascript Validation Bypass which exploit broken access controls. Using `Server-Side` validation maintains control over which clients are allowed to be validated.
 
 ____
 
@@ -115,15 +123,15 @@ WAFs are typically present on web sites that use strict transport security mecha
 
 1. Which layer of the OSI model do WAFs operate at?
 
-Answer:
+Answer: They operate at application Layer 7 of the OSI model, they can detect SQLi and XSS, which also occur at the application layer
 
 2. A WAF helps protect web applications by filtering and monitoring what?
 
-Answer:
+Answer: They filter and monitor traffic based on allow and deny lists or a hybrid of both.
 
 3. True or False: A WAF based on the negative security model (Blacklisting) protects against known attacks, and a WAF based on the positive security model (Whitelisting) allows pre-approved traffic to pass.
 
-Answer:
+Answer: True.
 ____
 
 #### Authentication and Access Controls
@@ -136,29 +144,25 @@ Security enhancements designed to require users to present two or more pieces of
 
 1. Define all four factors of multifactor authentication and give examples of each:
 
-   - Factor 1:
+   - Factor 1: Standard login inputs (password, PIN, cognitive questions)
+   
+   - Factor 2: Physical keys (smartcard, hard token)
 
-   
-   - Factor 2:
-   
-   
-   - Factor 3:
+   - Factor 3: Biometrics (iris/retina scan, hand geometry)
 
-   
-   - Factor 4:
-
+   - Factor 4: Location (GPS detection, callback to a home phone number)
    
 2. True or False: A password and pin is an example of 2-factor authentication.
 
-Answer:
+Answer: False, it's 1-factor.
    
 3. True or False: A password and `google authenticator app` is an example of 2-factor authentication.
 
-Answer:
+Answer: True.
    
 4. What is a constrained user interface? 
 
-Answer:
+Answer: A constrained user interface restricts what users can see and do based on their privileges.
 
 ----
 ____
