@@ -303,6 +303,7 @@ Your final act is to deface the website using command injection. Follow the walk
     * **and** echo `You've been hacked by...` followed by your name, to the `webgoat_challenge_guest.jsp` file.
     
 Please include a screenshot of the defaced website. 
+
 ![absolute path](Images/Part3.png)
 
 ---
