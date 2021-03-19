@@ -183,8 +183,6 @@ We'll use the **Web Vulns** lab environment. To access it:
 
 - The lab should already be started, so you should be able to connect immediately. 
 
-- Refer to the [lab setup instructions](https://cyberxsecurity.gitlab.io/documentation/using-classroom-labs/post/2019-01-09-first-access/) for details on setting up the RDP connection.
-
 Once the lab environment is running, open the HyperV manager and make sure that the OWASPBWA and Kali box is running.
 
 - Then, login to the Kali VM and navigate to the IP address of the OWASPBWA machine.
@@ -235,26 +233,16 @@ Your final act is to deface the website using command injection. Follow the walk
 
 - After completing the second challenge, you will be provided with an option to continue to the next challenge.
 
-   ![cracked credit cards](Images/credit_cards-cracked.png)
-
 - There should be two webpages at the bottom of the window. The one on top is the original, and the one on the bottom is the defaced webpage.
-
-   ![original webpage](Images/original_defaced.png)
 
 - Start Foxy Proxy (WebScarab) to send all GET/POST requests from Firefox to the WebScarab proxy intercept.
 
-   ![Foxy Proxy](Images/foxy_proxy_scab.png)
-
 - Click **TCP** and then the **View Network** button and send the request to WebScarab.
-
-   ![View Network](Images/view_network_tcp.png)
 
 - The WebScarab window will open. 
 
    - In the **URL Encoded** tab, find the **File** and **Value** form fields. 
    - This is where you will perform your command injection.
-   
-    ![File Field](Images/webscarab_file_value_field.png)
 
 - Next, perform a test and see if this shell is vulnerable to command injection. 
 
@@ -264,15 +252,9 @@ Your final act is to deface the website using command injection. Follow the walk
    
    - Click **Accept Changes**.
    
-     ![whoami](Images/whoami_pwd_image.png)
-   
    - On the next window, click **Accept Changes** twice.
-   
-     ![accept](Images/webscarab_2nd_window.png)
  
 - Scroll to the bottom of the **Current Network Status** window and observe the results for both of the `whoami` and `pwd` commands.
-
-    ![whoami & pwd](Images/whoami_pwd.png)
 
    - The results show that we are the root user and our current working directory is `/var/lib/tomcat6`.
 
@@ -284,11 +266,7 @@ Your final act is to deface the website using command injection. Follow the walk
    
       - **Note**: Windows users will need to type: `tcp && dir /s 'webgoat_challenge_guest.jsp'`
    
-   ![find command](Images/webscarab_find_command.png)
-   
    - The absolute path is: `./owaspbwa/owaspbwa-svn/var/lib/tomcat6/webapps/WebGoat/webgoat_challenge_guest.jsp`.
-   
-   ![absolute path](Images/webscarab_abolute_path.png)
    
    - Remember, our present working directory is `/var/lib/tomcat6`. Therefore, the relative path is `webapps/WebGoat/webgoat_challenge_guest.jsp`.
    
