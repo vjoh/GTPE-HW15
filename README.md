@@ -179,7 +179,6 @@ We'll use the **Web Vulns** lab environment. To access it:
   - Find the card with the title **Web Vulns** or **Web Vulnerability and Hardening**.
   - Click the monitor icon in the bottom-right. 
   - Select **Connect with RDP**.
-  - Use Credentials (azadmin:p4ssw0rd*)
 
 - The lab should already be started, so you should be able to connect immediately. 
 
